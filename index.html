@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Interview Assistant (Visible + Ethical)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <div>
+          <h1>Live Interview Assistant</h1>
+          <p class="subtitle">Visible support tool for practice or approved live assistance.</p>
+        </div>
+        <div class="size-controls" role="group" aria-label="Panel size">
+          <button type="button" data-size="small" class="size-btn">Small</button>
+          <button type="button" data-size="medium" class="size-btn active">Medium</button>
+          <button type="button" data-size="large" class="size-btn">Large</button>
+        </div>
+      </header>
+
+      <section class="toolbar" aria-label="Live controls">
+        <button type="button" id="liveModeButton" class="control-btn">Start Live Mode</button>
+        <span id="listenStatus" class="listen-status">Mic idle</span>
+      </section>
+
+      <section id="chatPanel" class="chat-panel panel-medium" aria-live="polite">
+        <div id="messages" class="messages"></div>
+      </section>
+
+      <form id="askForm" class="composer">
+        <label for="questionInput">Interviewer question</label>
+        <textarea
+          id="questionInput"
+          rows="3"
+          placeholder="Type or paste a question, then get a suggested response"
+          required
+        ></textarea>
+        <button type="submit">Generate Answer</button>
+      </form>
+
+      <section class="transcript-block" aria-label="Live transcript">
+        <label for="transcriptInput">Live transcript (auto-sent in Live Mode)</label>
+        <textarea
+          id="transcriptInput"
+          rows="4"
+          placeholder="When Live Mode is active, speech appears here and is auto-sent for answers."
+        ></textarea>
+      </section>
+
+      <p id="status" class="status">Ready</p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
