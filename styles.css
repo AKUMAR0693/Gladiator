@@ -1,0 +1,145 @@
+:root {
+  color-scheme: light dark;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #101216;
+  color: #e8ecf1;
+}
+
+.app {
+  max-width: 980px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.subtitle {
+  margin-top: 0.35rem;
+  color: #adb8c7;
+}
+
+.size-controls,
+.toolbar {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.toolbar {
+  margin-top: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.size-btn,
+button[type="submit"],
+.control-btn {
+  border: 1px solid #3a465c;
+  background: #17202f;
+  color: #dbe7ff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.control-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.size-btn.active,
+.control-btn.active {
+  border-color: #7bb0ff;
+  background: #20345d;
+}
+
+.listen-status {
+  color: #8fc5ff;
+  font-size: 0.95rem;
+}
+
+.chat-panel {
+  margin-top: 1rem;
+  border: 1px solid #2e3b53;
+  border-radius: 12px;
+  background: #121a27;
+  min-height: 260px;
+  resize: both;
+  overflow: auto;
+}
+
+.panel-small {
+  width: 420px;
+  height: 280px;
+}
+.panel-medium {
+  width: 640px;
+  height: 380px;
+}
+.panel-large {
+  width: 860px;
+  height: 540px;
+}
+
+.messages {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.msg {
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  line-height: 1.4;
+}
+
+.msg.user {
+  background: #233150;
+  align-self: flex-end;
+  max-width: 80%;
+}
+.msg.assistant {
+  background: #1c2a1f;
+  border: 1px solid #2f5940;
+  max-width: 90%;
+}
+
+.composer,
+.transcript-block {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+textarea {
+  width: min(900px, 100%);
+  border-radius: 10px;
+  border: 1px solid #33435f;
+  background: #0f1522;
+  color: #edf1f7;
+  padding: 0.75rem;
+}
+
+.status {
+  color: #9db4d4;
+}
+
+@media (max-width: 900px) {
+  .chat-panel,
+  .panel-small,
+  .panel-medium,
+  .panel-large,
+  textarea {
+    width: 100%;
+  }
+}
