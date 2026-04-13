@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indian Law Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">Legal research starter</p>
+      <h1>Indian Law Hub</h1>
+      <p class="subtitle">Explore BNS, BNSS, BSA and other major Indian laws with searchable summaries and official links.</p>
+      <div class="toolbar">
+        <input id="searchInput" type="text" placeholder="Search acts, sections, topics (e.g. arrest, cybercrime)" />
+        <select id="sortSelect" aria-label="Sort acts">
+          <option value="name-asc">Sort: Name A → Z</option>
+          <option value="name-desc">Sort: Name Z → A</option>
+          <option value="year-desc">Sort: Newest year first</option>
+          <option value="year-asc">Sort: Oldest year first</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="quick-grid" id="quickLinks"></section>
+
+    <section>
+      <h2>Act Directory</h2>
+      <div class="filters" id="filters"></div>
+      <p id="resultsMeta" class="results-meta"></p>
+      <div id="actsGrid" class="grid"></div>
+      <div id="emptyState" class="empty hidden">No acts found for this search/filter.</div>
+    </section>
+
+    <section class="note">
+      <h3>Disclaimer</h3>
+      <p>
+        This website is for legal awareness and research assistance only and is not legal advice.
+        Verify current text, amendments, and enforcement notifications from official sources.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>Built for Indian law learners and legal ops teams.</p>
+      <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer">Official source: India Code</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
